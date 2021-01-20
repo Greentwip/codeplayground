@@ -12,6 +12,7 @@
 #include <iomanip>
 #include <sstream>
 #include <ostream>
+#include <algorithm>
 
 #include "catch_amalgamated.hpp"
 

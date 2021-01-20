@@ -12,6 +12,7 @@
 		0A1B180225B7AAB800EE65E3 /* catch_amalgamated.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B180125B7AAB800EE65E3 /* catch_amalgamated.cpp */; };
 		0A1B180725B7BAB300EE65E3 /* string_manipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B180625B7BAB300EE65E3 /* string_manipulation.cpp */; };
 		0A1B180C25B7BF1500EE65E3 /* array_manipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B180B25B7BF1500EE65E3 /* array_manipulation.cpp */; };
+		0A1B181025B7CDA100EE65E3 /* samples.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B180F25B7CDA100EE65E3 /* samples.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 		0A1B180125B7AAB800EE65E3 /* catch_amalgamated.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = catch_amalgamated.cpp; sourceTree = "<group>"; };
 		0A1B180625B7BAB300EE65E3 /* string_manipulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = string_manipulation.cpp; sourceTree = "<group>"; };
 		0A1B180B25B7BF1500EE65E3 /* array_manipulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = array_manipulation.cpp; sourceTree = "<group>"; };
+		0A1B180F25B7CDA100EE65E3 /* samples.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = samples.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		0A1B17EE25B7A3D500EE65E3 /* codeplayground */ = {
 			isa = PBXGroup;
 			children = (
+				0A1B180E25B7CD8D00EE65E3 /* structures */,
 				0A1B180A25B7BEFA00EE65E3 /* arrays */,
 				0A1B17F825B7A44300EE65E3 /* matrices */,
 				0A1B180525B7BA3E00EE65E3 /* strings */,
@@ -98,6 +101,14 @@
 				0A1B180B25B7BF1500EE65E3 /* array_manipulation.cpp */,
 			);
 			path = arrays;
+			sourceTree = "<group>";
+		};
+		0A1B180E25B7CD8D00EE65E3 /* structures */ = {
+			isa = PBXGroup;
+			children = (
+				0A1B180F25B7CDA100EE65E3 /* samples.cpp */,
+			);
+			path = structures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				0A1B17FB25B7A45900EE65E3 /* matrix_manipulation.cpp in Sources */,
 				0A1B180225B7AAB800EE65E3 /* catch_amalgamated.cpp in Sources */,
 				0A1B180725B7BAB300EE65E3 /* string_manipulation.cpp in Sources */,
+				0A1B181025B7CDA100EE65E3 /* samples.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

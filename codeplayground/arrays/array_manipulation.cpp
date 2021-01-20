@@ -58,9 +58,7 @@ TEST_CASE( "Test max candles" ) {
             max_candles++;
         }
     }
-    
-    return ;
-    
+        
     CHECK(max_candles == 2);
     
 }
