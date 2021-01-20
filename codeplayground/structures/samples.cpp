@@ -67,4 +67,37 @@ TEST_CASE( "Test greedy florist" ) {
     
 }
 
+TEST_CASE( "Test jim and the orders" ) {
+    
+    auto c = std::vector<std::vector<int>>{
+        {8, 1},
+        {4, 2},
+        {5, 6},
+        {3, 1},
+        {4, 3}
+    };
+    
+    std::vector<std::pair<int, int>> customers_order;
+    
+    for(int i = 0; i<c.size(); ++i){
+        auto& order_pair = c[i];
+        int preparation_time = (order_pair[0] + 1) + order_pair[1];
+        customers_order.push_back({preparation_time, i+1});
+    }
+    
+    std::sort(customers_order.begin(), customers_order.end());
+    
+    
+    std::vector<int> final_customers_order;
+    
+    for(auto& kp : customers_order){
+        final_customers_order.push_back(kp.second);
+    }
+    
+    
+    
+    CHECK(final_customers_order == std::vector<int>{4, 2, 5, 1, 3});
+    
+}
+
 
