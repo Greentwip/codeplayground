@@ -50,12 +50,14 @@ TEST_CASE( "Test greedy florist" ) {
     int previous_price = 0;
     int customers = k;
     
-    for(int flowers = 0, flowers_stage=customers-1; flowers<count; ++flowers){
-        price += c[flowers] * (previous_price + 1);
+    for(int purchasen = 0, purchasen_flower_index=customers-1;
+        purchasen<count;
+        ++purchasen){
+        price += c[purchasen] * (previous_price + 1);
         
-        if(flowers == flowers_stage){
+        if(purchasen == purchasen_flower_index){
             previous_price++;
-            flowers_stage+=customers;
+            purchasen_flower_index+=customers;
         }
         
     }
