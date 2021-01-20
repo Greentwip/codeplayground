@@ -103,4 +103,31 @@ TEST_CASE( "Test max min" ) {
     
 }
 
+TEST_CASE( "Test permuting two arrays" ) {
+    
+    int k = 10;
+    
+    auto A = std::vector<int>{2, 1, 3};
+    auto B = std::vector<int>{7, 8, 9};
+    
+    std::sort(A.begin(), A.end());
+    std::sort(B.begin(), B.end(), std::greater<int>());
+    
+    std::string result;
+    
+    for(int i = 0; i<A.size(); i++){
+        if((A[i] + B[i]) < k){
+            result = "NO";
+            break;
+        }
+    }
+    
+    if(result.compare("NO") != 0){
+        result = "YES";
+    }
+                                       
+    CHECK(result.compare("YES") == 0);
+    
+}
+
 
