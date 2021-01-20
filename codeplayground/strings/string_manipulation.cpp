@@ -54,3 +54,73 @@ TEST_CASE( "Test staircase" ) {
     CHECK(slopes[4].compare(" #####\n") == 0);
     CHECK(slopes[5].compare("######") == 0);
 }
+
+bool replace(std::string& str, const std::string& from, const std::string& to) {
+    size_t start_pos = str.find(from);
+    if(start_pos == std::string::npos)
+        return false;
+    str.replace(start_pos, from.length(), to);
+    return true;
+}
+
+std::vector<std::string> split(std::string str, char token){
+    std::replace(str.begin(), str.end(), token, ' ');  // replace ':' by ' '
+
+    std::vector<std::string> array;
+    std::stringstream ss(str);
+    std::string temp;
+    
+    while (ss >> temp){
+        array.push_back(temp);
+    }
+    
+    return array;
+
+}
+
+TEST_CASE( "Test time conversion" ) {
+    std::string input = "02:34:50PM";
+
+    bool is_pm = false;
+    if(replace(input, "PM", "")){
+        is_pm = true;
+    } else{
+        replace(input, "AM", "");
+        is_pm = false;
+    }
+    
+    std::vector<std::string> time_chunks = split(input, ':');
+    
+    int hour = std::atoi(time_chunks[0].c_str());
+    
+    if(is_pm){
+        if(hour != 12){
+            hour += 12;
+        }
+    }
+    
+    if(!is_pm){
+        if(hour == 12){
+            hour = 0;
+        }
+    }
+    
+    std::string final_hour;
+    
+    if(std::to_string(hour).length() == 1){
+        final_hour = "0" + std::to_string(hour);
+    } else {
+        final_hour = std::to_string(hour);
+    }
+    
+    std::ostringstream oss;
+    
+    oss << final_hour;
+    oss << ":";
+    oss << time_chunks[1];
+    oss << ":";
+    oss << time_chunks[2];
+    
+    CHECK(oss.str().compare("14:34:50") == 0);
+    
+}
