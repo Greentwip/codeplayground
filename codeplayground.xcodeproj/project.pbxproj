@@ -11,6 +11,7 @@
 		0A1B17FB25B7A45900EE65E3 /* matrix_manipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B17F925B7A45900EE65E3 /* matrix_manipulation.cpp */; };
 		0A1B180225B7AAB800EE65E3 /* catch_amalgamated.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B180125B7AAB800EE65E3 /* catch_amalgamated.cpp */; };
 		0A1B180725B7BAB300EE65E3 /* string_manipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B180625B7BAB300EE65E3 /* string_manipulation.cpp */; };
+		0A1B180C25B7BF1500EE65E3 /* array_manipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B180B25B7BF1500EE65E3 /* array_manipulation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 		0A1B180025B7AAB800EE65E3 /* catch_amalgamated.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch_amalgamated.hpp; sourceTree = "<group>"; };
 		0A1B180125B7AAB800EE65E3 /* catch_amalgamated.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = catch_amalgamated.cpp; sourceTree = "<group>"; };
 		0A1B180625B7BAB300EE65E3 /* string_manipulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = string_manipulation.cpp; sourceTree = "<group>"; };
+		0A1B180B25B7BF1500EE65E3 /* array_manipulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = array_manipulation.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,29 +66,38 @@
 		0A1B17EE25B7A3D500EE65E3 /* codeplayground */ = {
 			isa = PBXGroup;
 			children = (
-				0A1B180525B7BA3E00EE65E3 /* string_manipulation */,
-				0A1B180125B7AAB800EE65E3 /* catch_amalgamated.cpp */,
+				0A1B180A25B7BEFA00EE65E3 /* arrays */,
+				0A1B17F825B7A44300EE65E3 /* matrices */,
+				0A1B180525B7BA3E00EE65E3 /* strings */,
 				0A1B180025B7AAB800EE65E3 /* catch_amalgamated.hpp */,
-				0A1B17F825B7A44300EE65E3 /* matrix_manipulation */,
+				0A1B180125B7AAB800EE65E3 /* catch_amalgamated.cpp */,
 				0A1B17EF25B7A3D500EE65E3 /* main.cpp */,
 			);
 			path = codeplayground;
 			sourceTree = "<group>";
 		};
-		0A1B17F825B7A44300EE65E3 /* matrix_manipulation */ = {
+		0A1B17F825B7A44300EE65E3 /* matrices */ = {
 			isa = PBXGroup;
 			children = (
 				0A1B17F925B7A45900EE65E3 /* matrix_manipulation.cpp */,
 			);
-			path = matrix_manipulation;
+			path = matrices;
 			sourceTree = "<group>";
 		};
-		0A1B180525B7BA3E00EE65E3 /* string_manipulation */ = {
+		0A1B180525B7BA3E00EE65E3 /* strings */ = {
 			isa = PBXGroup;
 			children = (
 				0A1B180625B7BAB300EE65E3 /* string_manipulation.cpp */,
 			);
-			path = string_manipulation;
+			path = strings;
+			sourceTree = "<group>";
+		};
+		0A1B180A25B7BEFA00EE65E3 /* arrays */ = {
+			isa = PBXGroup;
+			children = (
+				0A1B180B25B7BF1500EE65E3 /* array_manipulation.cpp */,
+			);
+			path = arrays;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A1B17F025B7A3D500EE65E3 /* main.cpp in Sources */,
+				0A1B180C25B7BF1500EE65E3 /* array_manipulation.cpp in Sources */,
 				0A1B17FB25B7A45900EE65E3 /* matrix_manipulation.cpp in Sources */,
 				0A1B180225B7AAB800EE65E3 /* catch_amalgamated.cpp in Sources */,
 				0A1B180725B7BAB300EE65E3 /* string_manipulation.cpp in Sources */,
