@@ -46,6 +46,7 @@ TEST_CASE( "Test matrix diagonals" ) {
     CHECK(std::abs(leftDiagonal - rightDiagonal) == 4);
     
 }
+
 TEST_CASE( "Array ratios" ) {
     auto arr = std::vector<int>{-4, 3, -9, 0, 4, 1};
     int positives = 0;
