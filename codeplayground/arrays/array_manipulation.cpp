@@ -19,8 +19,13 @@ TEST_CASE( "Test 4 of 5" ) {
     
     auto array = std::vector<int>{1, 2, 3, 4, 5};
     
-    int minSum = 0;
-    int maxSum = 0;
+    long long minSum = 0;
+    long long maxSum = 0;
+    
+    std::sort(array.begin(), array.end());
+    
+
+    
     for(int i = 0; i<array.size() - 1; i++){
         // print spaces
         
