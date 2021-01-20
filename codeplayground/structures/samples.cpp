@@ -81,7 +81,7 @@ TEST_CASE( "Test jim and the orders" ) {
     
     for(int i = 0; i<c.size(); ++i){
         auto& order_pair = c[i];
-        int preparation_time = (order_pair[0] + 1) + order_pair[1];
+        int preparation_time = order_pair[0] + order_pair[1];
         customers_order.push_back({preparation_time, i+1});
     }
     
