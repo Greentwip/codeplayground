@@ -63,5 +63,44 @@ TEST_CASE( "Test max candles" ) {
     
 }
 
+TEST_CASE( "Test max min" ) {
+    
+    auto c =
+    std::vector<int>{
+        10,
+        100,
+        300,
+        200,
+        1000,
+        20,
+        30};
+    int k = 3;
+    
+    auto& arr = c;
+        
+    std::sort(arr.begin(), arr.end());
+   
+    std::vector<std::vector<int>> fair_arrays;
+    
+    int min_fairness = std::numeric_limits<int>::max();
+    
+    for(int i = 0; i<arr.size() - k; i++){
+        
+        auto max_end = std::min((i+k), (int)arr.size());
+        
+        auto fair_array = std::vector<int>(arr.begin()+i, arr.begin()+max_end);
+        
+        auto fairness = fair_array[fair_array.size() - 1] - fair_array[0];
+        
+        if(fairness < min_fairness){
+            min_fairness = fairness;
+        }
+    }
+    
+                                  
+                                       
+    CHECK(min_fairness == 20);
+    
+}
 
 
