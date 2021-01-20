@@ -12,6 +12,7 @@
 #include <iomanip>
 #include <sstream>
 #include <ostream>
+#include <algorithm>
 
 #include "catch_amalgamated.hpp"
 
@@ -43,3 +44,24 @@ TEST_CASE( "Test 4 of 5" ) {
     CHECK(maxSum == 14);
     
 }
+
+
+TEST_CASE( "Test max candles" ) {
+    
+    auto candles = std::vector<int>{3, 2, 1, 3};
+    int max_element = *std::max_element(candles.begin(), candles.end());
+    
+    long long max_candles = 0;
+    
+    for(auto& candle : candles){
+        if(candle == max_element){
+            max_candles++;
+        }
+    }
+    
+    return ;
+    
+    CHECK(max_candles == 2);
+    
+}
+
